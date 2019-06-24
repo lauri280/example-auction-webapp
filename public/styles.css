@@ -1,0 +1,240 @@
+/* font properties */
+@font-face {
+    font-family: mohave-bold;
+    src: url(./fonts/Mohave-Bold.woff);
+}
+
+@font-face {
+    font-family: josefinSans-thin;
+    src: url(./fonts/JosefinSans-Thin.woff);
+}
+
+@font-face {
+    font-family: josefinSans-bold;
+    src: url(./fonts/JosefinSans-Bold.woff);
+}
+
+h1 {
+    font-family: mohave-bold;
+    color: #F2F2F3;
+    font-size: 60px;
+    text-decoration: underline;
+}
+
+h3 {
+    font-family: josefinSans-bold;
+    color: white;
+}
+
+h2, h4, p {
+    font-family: josefinSans-bold;
+    color: black;
+}
+
+body {
+    background-color: #F2F2F3;
+    margin: 0px;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: #199A48;
+}
+
+#header h1 {
+    margin: 0px;
+    padding: 10px 20px;
+    color: #F2F2F3;
+}
+
+#main-row {
+    display: flex;
+    flex-wrap: nowrap;
+    height: auto;
+    min-height: 500px;
+}
+
+#menu {
+    float: left;
+    width: 19%;
+    min-width: 250px;
+    min-height: 100%;
+    background-color: #49B862;
+}
+
+#menu h3 {
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+#category-menu {
+    padding-left: 20px;
+}
+
+#reset-categories {
+    height: 30px;
+    width: 150px;
+    margin-left: 20px;
+    color: white;
+    font-size: 14px;
+    background-color: #49B862;
+    border: 3px solid #199A48;
+    outline: none;
+}
+
+#reset-categories:hover {
+    box-shadow: 3px 3px 5px #199A48;
+}
+
+#reset-categories:active {
+    box-shadow: 3px 3px 5px #199A48;
+    border: 3px solid #F2F2F3;
+}
+
+.category-menu-item {
+    margin: 10px 0px;
+}
+
+.category-menu-item label {
+    font-family: josefinSans-bold;
+    color: #F2F2F3;
+    margin-left: 5px;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    background-color: #F2F2F3;
+    min-height: 100%;
+}
+
+.item {
+    height: 250px;
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    position: relative;
+    background-color: #199A48;
+    box-shadow: 3px 3px 5px grey;
+    display: block;
+}
+
+.item:hover {
+    background-color: #49B862;
+}
+
+.item:hover .bid-button{
+    visibility: visible;
+}
+
+.item h4 {
+    margin: 0px;
+    font-size: 25px;
+}
+
+.time-left {
+    position: absolute;
+    bottom: 35px;
+    font-family: josefinSans-thin;
+    font-size: 16px;
+    color: #F2F2F3;
+}
+
+.category-label {
+    font-family: josefinSans-thin;
+    color: #F2F2F3;
+    font-size: 14px;
+}
+
+.bid-button {
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    bottom: -5px;
+    color: black;
+    font-size: 18px;
+    background-color: #F2F2F3;
+    border: 3px solid #199A48;
+    outline: none;
+    visibility: hidden;
+}
+
+.bid-button:hover {
+    background-color: #F2F2F3;
+    border: 3px solid #199A48;
+}
+
+.bid-button:active {
+    background-color: rgb(138, 231, 159);
+}
+
+#bid-window {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#bid-window-content {
+    margin: 15% auto;
+    padding: 20px;
+    width: 40%;
+    min-width: 300px;
+    border: 3px solid #199A48;
+    background-color: #F2F2F3;
+    animation-name: animate-bid-window;
+    animation-duration: 300ms;
+}
+
+#bid-window-content input {
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+    border: 1px solid #199A48;
+    background-color: #F2F2F3;
+}
+
+.close {
+    color: #199A48;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+.confirm-bid-button {
+    margin-top: 20px;
+    height: 50px;
+    width: 200px;
+    color: black;
+    font-size: 18px;
+    background-color: #F2F2F3;
+    border: 3px solid #199A48;
+    outline: none;
+}
+
+.confirm-bid-button:hover {
+    box-shadow: 3px 3px 5px #aaaaaa;
+}
+
+.confirm-bid-button:active {
+    box-shadow: 3px 3px 5px #aaaaaa;
+    background-color: rgb(138, 231, 159);
+}
+
+@keyframes animate-bid-window {
+    from {top: 150px; opacity: 0}
+    to {top: 0px; opacity: 1}
+}
